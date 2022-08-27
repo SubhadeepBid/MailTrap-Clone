@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/qa_automation.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/navbar.css">
 </head>
 
 <body>
-
+    
+    <div id="nav_container"></div>
     <div id="box1">
         <div id="text_box">
             <h1>Powerful Automation For Testing Your Email Sequences</h1>
@@ -166,7 +169,17 @@
             </div>
         </div>
     </div>
+    <div id="footcont"></div>
 </body>
 
 </html>
 <script src="./Scripts/qa_automation.js"></script>
+<script type="module">
+    import footer from './Scripts/footer.js';
+    let container=document.getElementById("footcont");
+    container.innerHTML=footer();
+
+    import navbar from "./components/navbar.js";
+     let nav_container=document.getElementById("nav_container");
+     nav_container.innerHTML=navbar();
+</script>

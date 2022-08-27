@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/fake_SMTP_Server.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/navbar.css">
 </head>
 <body>
     <!-- HTML Check Page -->
+    <div id="nav_container"></div>
     <div id="box1">
         <div id="text_box">
             <h1>Safe Email Testing With Mailtrap’s Fake SMTP Server</h1>
@@ -165,7 +168,20 @@
             </div>
         </div>
     </div>
+
+    <div id="footcont"></div>
 </body>
 </html>
 
 <script src="./Scripts/fake_SMTP_Server.js"></script>
+<script type="module">
+
+     import footer from './Scripts/footer.js';
+     let container=document.getElementById("footcont");
+     container.innerHTML=footer();
+
+
+     import navbar from "./components/navbar.js";
+     let nav_container=document.getElementById("nav_container");
+     nav_container.innerHTML=navbar();
+</script>
